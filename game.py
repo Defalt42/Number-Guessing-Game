@@ -4,7 +4,11 @@ import random
 rand_num = random.randint(1, 100)
 
 while True:
-	guess = int(input("Guess a whole number between 1 and 100: "))
+	try:
+		guess = int(input("Guess a whole number between 1 and 100: "))
+	except ValueError:
+		print("That is not a whole number. Try again.")
+		continue
 
 	if guess < 1 or guess > 100:
 		print(guess + " is not between 1 and 100. Try again.")
@@ -17,5 +21,3 @@ while True:
 		else:
 			print("{} is correct!".format(guess))
 			break
-
-	
