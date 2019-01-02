@@ -11,7 +11,7 @@ while True:
 		continue
 
 	if guess < 1 or guess > 100:
-		print(guess + " is not between 1 and 100. Try again.")
+		print(str(guess) + " is not between 1 and 100. Try again.")
 		continue
 	else:
 		if guess > rand_num:
